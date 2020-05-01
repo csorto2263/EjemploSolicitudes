@@ -1,0 +1,15 @@
+c:\users\thelma\documents\visual studio 2012\Projects\SOLICITUDES\SOLICITUDES\bin\Debug\SOLICITUDES.exe.config
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\bin\Debug\SOLICITUDES.exe
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\bin\Debug\SOLICITUDES.pdb
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.csprojResolveAssemblyReference.cache
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.login.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.Properties.Resources.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.csproj.GenerateResource.Cache
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.exe
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.pdb
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.CrearSolicitudes.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.Aprobar.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.Activar.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.Anuladas.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.SoliActivas.resources
+C:\Users\Thelma\Documents\Visual Studio 2012\Projects\SOLICITUDES\SOLICITUDES\obj\Debug\SOLICITUDES.Principal.resources
