@@ -28,11 +28,6 @@ namespace SOLICITUDES
 
         }
 
-        private void solicitudesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,7 +60,10 @@ namespace SOLICITUDES
         {
             con.Open();
             string sql = null;
-            sql = "update SOLICITUDES_CLIENTES set ESTADOID = 4  where DATEDIFF (DAY, fecha_creada , '" + DateTime.Today.Date + "' )  > 30";
+            sql = @"UPDATE SOLICITUDES_CLIENTES 
+                      SET ESTADOID = 4  
+                    WHERE DATEDIFF (DAY, 
+                                   FECHA_CREADA , '" + DateTime.Today.Date + "' )  > 30";
 
             SqlCommand command = new SqlCommand(sql, con);
             command.ExecuteNonQuery();

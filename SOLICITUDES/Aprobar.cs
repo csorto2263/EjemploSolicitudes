@@ -40,7 +40,12 @@ namespace SOLICITUDES
             con.Open();
             if (gvListadoCreados.SelectedRows.Count > 0)
             {
-                sql = @"UPDATE SOLICITUDES_CLIENTES set estadoid = 2, username = '" + userFrm + "' where ID = '" + gvListadoCreados.SelectedRows[0].Cells[2].Value.ToString() + "' and solicitudid = " + gvListadoCreados.SelectedRows[0].Cells[0].Value.ToString() + " and estadoid = " + gvListadoCreados.SelectedRows[0].Cells[5].Value.ToString();
+                sql = @"UPDATE SOLICITUDES_CLIENTES 
+                           SET ESTADOID = 2, 
+                               USERNAME = '" + userFrm + 
+                      "' WHERE ID = '" + gvListadoCreados.SelectedRows[0].Cells[2].Value.ToString() + 
+                            "' AND SOLICITUDID = " + gvListadoCreados.SelectedRows[0].Cells[0].Value.ToString() + 
+                             " AND ESTADOID = " + gvListadoCreados.SelectedRows[0].Cells[5].Value.ToString();
 
                 command = new SqlCommand(sql, con);
                 command.ExecuteNonQuery();

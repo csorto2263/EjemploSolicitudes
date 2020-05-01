@@ -25,50 +25,15 @@ namespace SOLICITUDES
             userFrm = user;
         }
 
-        private void CrearSolicitudes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             con.Open();
             string sql = null;
             SqlDataReader dataReader;
 
-
-
-            sql = "SELECT * FROM CLIENTES where id = '" + txtID.Text.Replace("-", "") + "'";
+            sql = @"SELECT * 
+                      FROM CLIENTES
+                     WHERE ID = '" + txtID.Text.Replace("-", "") + "'";
 
             command = new SqlCommand(sql, con);
 
@@ -100,11 +65,26 @@ namespace SOLICITUDES
                 DialogResult dialogResult = MessageBox.Show("El cliente no existe en la base de datos, ¿Desea agregarlo?", "Cliente no existe", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)//y lo inserta automaticamente si responde que si.
                 {
-                    sql = "insert into CLIENTES (ID, NOMBRE, APELLIDO, FECHA_NACIMIENTO, SEXO) VALUES ('" + txtID.Text.Replace("-", "") + "', '" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + dtFechaNacimiento.Value.Date + "', '" + cbSexo.Text + "')";
+                    sql = @"INSERT INTO CLIENTES (ID, 
+                                                 NOMBRE, 
+                                                 APELLIDO, 
+                                                 FECHA_NACIMIENTO, 
+                                                 SEXO) 
+                                          VALUES ('" + txtID.Text.Replace("-", "") + "', '" + 
+                                                  txtNombre.Text + "', '" + 
+                                                  txtApellido.Text + "', '" + 
+                                                  dtFechaNacimiento.Value.Date + "', '" + 
+                                                  cbSexo.Text + "')";
                     command = new SqlCommand(sql, con);
                     command.ExecuteNonQuery();
 
-                    sql = "insert into SOLICITUDES_CLIENTES (SOLICITUDID, ID, ESTADOID, USERNAME) VALUES (" + solicitudId + ", '" + txtID.Text.Replace("-", "") + "', 0, '" + userFrm + "')";
+                    sql = @"INSERT INTO SOLICITUDES_CLIENTES (SOLICITUDID, 
+                                                             ID, 
+                                                             ESTADOID, 
+                                                             USERNAME) 
+                                                      VALUES (" + solicitudId + ", '" + 
+                                                             txtID.Text.Replace("-", "") + "', 0, '" + 
+                                                             userFrm + "')";
                     command = new SqlCommand(sql, con);
                     command.ExecuteNonQuery();
                 }
@@ -119,7 +99,9 @@ namespace SOLICITUDES
             {
                 bool tienePendiente = false;
 
-                sql = "select estadoid from SOLICITUDES_CLIENTES where id = '"+ txtID.Text.Replace("-", "") + "'";
+                sql = @"SELECT ESTADOID 
+                        FROM SOLICITUDES_CLIENTES 
+                       WHERE ID = '"+ txtID.Text.Replace("-", "") + "'";
                 command = new SqlCommand(sql, con);
 
                 dataReader = command.ExecuteReader();
@@ -148,7 +130,14 @@ namespace SOLICITUDES
                 }
                 else
                 {
-                    sql = "insert into SOLICITUDES_CLIENTES (SOLICITUDID, ID, ESTADOID, USERNAME) VALUES (" + solicitudId + ", '" + txtID.Text.Replace("-", "") + "', 1, '" + userFrm + "')";
+                    sql = @"INSERT INTO SOLICITUDES_CLIENTES (SOLICITUDID, 
+                                                            ID, 
+                                                            ESTADOID, 
+                                                            USERNAME) 
+                                                     VALUES (" + solicitudId + ", '" + 
+                                                            txtID.Text.Replace("-", "") + 
+                                                            "', 1, '" + 
+                                                            userFrm + "')";
                     command = new SqlCommand(sql, con);
                     command.ExecuteNonQuery();
 

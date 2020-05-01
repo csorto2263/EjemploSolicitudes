@@ -40,7 +40,18 @@ namespace SOLICITUDES
             con.Open();
             string sql = null;
 
-            sql = "select A.SOLICITUDID, c.DESCRIPTION, A.ID, b.nombre, b.apellido, a.estadoid from SOLICITUDES_CLIENTES A, clientes b, tipos_solicitudes c where a.ID = b.ID and a.SOLICITUDID = c.SOLICITUDID and a.estadoid = 4";
+            sql = @"SELECT A.SOLICITUDID, 
+                           C.DESCRIPTION, 
+                           A.ID, 
+                           B.NOMBRE, 
+                           B.APELLIDO, 
+                           A.ESTADOID
+                      FROM SOLICITUDES_CLIENTES A, 
+                           CLIENTES B, 
+                           TIPOS_SOLICITUDES C 
+                     WHERE A.ID = B.ID AND
+                           A.SOLICITUDID = C.SOLICITUDID AND
+                           A.ESTADOID = 4";
 
             command = new SqlCommand(sql, con);
             SqlDataAdapter DaRec2 = new SqlDataAdapter(command);
